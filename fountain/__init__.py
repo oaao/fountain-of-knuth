@@ -1,5 +1,5 @@
 from . import (
-	io,
+	file_io,
 	linguistics,
 	objects
 )

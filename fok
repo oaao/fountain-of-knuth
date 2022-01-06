@@ -17,4 +17,4 @@ if __name__ == "__main__":
 	
 	path = get_wordlist_path()
 
-	WORDLIST = fountain.io.read_file(path)
+	WORDLIST = fountain.file_io.read_file(path)
