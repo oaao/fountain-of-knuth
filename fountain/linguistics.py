@@ -19,6 +19,8 @@ METHODOLOGY: Using the Google Books Ngrams dataset (English 20120701), perform
 the analysis on the entire corpus, with no sample size or length restrictions.
 Discard any word with fewer than 100,000 mentions.
 
+Mayzner had actually reached out to Norvig requesting this update to his work!
+
 SAMPLE SIZE: 743,842,922,321 (unique: 97,565)
 https://archive.is/wip/SHwcy
 Data available by substituting {a-z} for the final character in the URL:
