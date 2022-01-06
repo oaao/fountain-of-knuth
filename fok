@@ -5,7 +5,7 @@ import sys
 import fountain
 
 
-def get_path():
+def get_wordlist_path():
 	"""Return a custom or default path."""
 	try:
 		return sys.argv[1]
@@ -15,6 +15,6 @@ def get_path():
 
 if __name__ == "__main__":
 	
-	path = get_path()
+	path = get_wordlist_path()
 
-	WORDLIST = fountain.io.get_wordlist(path)
+	WORDLIST = fountain.io.read_file(path)

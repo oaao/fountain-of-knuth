@@ -2,11 +2,9 @@
 from pathlib import Path
 
 
-def get_wordlist(wordlist_path: str) -> tuple[str]:
-	"""Process a wordlist file into a tuple of strings."""
-	path = Path(wordlist_path).resolve()
-
+def read_file(file: str) -> tuple[str]:
+	"""Read a file and return its line contents as a tuple of strings."""
+	path = Path(file).resolve()
 	with open(path, "r", encoding="utf-8") as f:
-		wordlist = tuple(f.read().splitlines())
-
-	return wordlist
+		contents = tuple(f.read().splitlines())
+	return contents
