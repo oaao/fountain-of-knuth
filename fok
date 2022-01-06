@@ -5,16 +5,16 @@ import sys
 import fountain
 
 
-def get_wordlist_path():
-	"""Return a custom or default path."""
-	try:
-		return sys.argv[1]
-	except IndexError:
-		return 'wordlist.txt'
+def import_custom_wordlist() -> tuple[str]:
+	"""Check for a custom wordlist."""
+	path = sys.argv[1]
+	return fountain.file_io.read(path)
 
 
 if __name__ == "__main__":
-	
-	path = get_wordlist_path()
 
-	WORDLIST = fountain.file_io.read_file(path)
+	if not fountain.has_all_static_data():
+		fountain.generate_data()
+
+	if len(sys.argv) > 1:
+		custom_wordlist = import_custom_wordlist()
